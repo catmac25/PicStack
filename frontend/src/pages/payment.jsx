@@ -23,7 +23,7 @@ const Payment = () => {
             return;
         }
         try{
-            const res = await fetch('http://localhost:8000/api/payment/free-subscribe', {
+            const res = await fetch('https://picstack-1wix.onrender.com/api/payment/free-subscribe', {
                 method: "POST", 
                 headers: {
                     'Content-Type': 'application/json',
@@ -34,7 +34,7 @@ const Payment = () => {
 
             const data = await res.json();
             if (res.ok){
-                const userRes = await fetch("http://localhost:8000/api/user/myprofile", {
+                const userRes = await fetch("https://picstack-1wix.onrender.com/api/user/myprofile", {
                     headers: { authorization: `Bearer ${token}` },
                 });
                 const userData = await userRes.json();
@@ -68,7 +68,7 @@ const Payment = () => {
         }
         try{
         const stripe = await stripePromise;
-        const response = await fetch(`http://localhost:8000/api/payment/create-checkout-session`, {
+        const response = await fetch(`https://picstack-1wix.onrender.com/api/payment/create-checkout-session`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
