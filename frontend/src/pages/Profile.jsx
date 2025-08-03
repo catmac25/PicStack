@@ -18,7 +18,7 @@ const Profile = () => {
   const handleDeleteSelected = async() => {
     try {
       const token = localStorage.getItem("token");
-      const res = await fetch("http://localhost:8000/api/file/delete", {
+      const res = await fetch("https://picstack-1wix.onrender.com/api/file/delete", {
         method: "DELETE",
         headers: {
           "Content-Type": "application/json",
