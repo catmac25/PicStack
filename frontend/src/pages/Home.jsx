@@ -5,7 +5,7 @@ import Information from '../components/information';
 import Features from '../components/Features';
 import Examples from '../components/examples/Examples';
 import { motion } from 'framer-motion';
-import Slider from '../components/carousel/slider';
+import Slider from '../components/carousel/Slider';
 // import App from "../components/carousel/Appli"
 
 const animation = {
