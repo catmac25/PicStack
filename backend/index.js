@@ -11,7 +11,10 @@ PORT = process.env.PORT || 8000;
 app.use(express.json());
 app.use(express.urlencoded({extended:false}));
 app.use(cors());
-
+app.use(cors({
+    origin: "https://picstack-frontend.vercel.app", // replace with your real frontend URL
+    credentials: true
+  }));
 app.use (passport.initialize());
 const googleAuthRoutes = require("./routes/googleAuth");
 app.use('/', googleAuthRoutes);
