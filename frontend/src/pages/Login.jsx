@@ -18,7 +18,7 @@ const Login = () => {
     });
   };
   const handleGoogleLogin = () => {
-    window.location.href = "http://localhost:8000/auth/google";
+    window.location.href = "https://picstack-1wix.onrender.com/auth/google";
   };
   const handleRegisterChange = (e) =>{
     setRegisterForm({...registerForm, [e.target.name]: e.target.value});
