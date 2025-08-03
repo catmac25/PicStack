@@ -12,7 +12,7 @@ app.use(express.json());
 app.use(express.urlencoded({extended:false}));
 app.use(cors());
 app.use(cors({
-    origin: "https://picstack-frontend.vercel.app", // replace with your real frontend URL
+    origin: "https://pic-stack-arpita-aroras-projects.vercel.app", // replace with your real frontend URL
     credentials: true
   }));
 app.use (passport.initialize());
