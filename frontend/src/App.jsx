@@ -12,7 +12,7 @@ import Cancel from './pages/Cancel'
 import Profile from './pages/Profile'
 import Feedback from './pages/Feedback'
 // import OAuthSuccess from './pages/OAuthSuccess'
-import OAuthSuccess from './pages/oAuthSuccess'
+import OAuthSuccess from './pages/OAuthSuccess'
 function App() {
   return (
    
