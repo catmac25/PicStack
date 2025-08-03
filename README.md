@@ -1,5 +1,5 @@
 # picStack
-PicStack is a full-stack web application for managing and storing user images with authentication, subscription-based access, and seamless integration of Google OAuth and Stripe for user login and payments.
+PicStack is a full-stack web application for managing and storing user images with authentication, subscription-based access, and seamless integration of Google OAuth, URL generation via Cloudinary and Stripe for user login and payments.
 
 🔗 Live Links
 Frontend: https://pic-stack-arpita-aroras-projects.vercel.app
