@@ -85,7 +85,7 @@ const Payment = () => {
             }, 2000);
         }
         if (response.ok){
-                const userRes = await fetch("http://localhost:8000/api/user/myprofile", {
+                const userRes = await fetch("https://picstack-1wix.onrender.com/api/user/myprofile", {
                     headers: { authorization: `Bearer ${data.token}` },
                 });
                 const userData = userRes.json();

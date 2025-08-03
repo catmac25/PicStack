@@ -19,7 +19,7 @@ const Upload = () => {
         const t = localStorage.getItem("token");
         if (t!=  null){
         try{
-            const res = await fetch("http://localhost:8000/api/file/fetchCount", {
+            const res = await fetch("https://picstack-1wix.onrender.com/api/file/fetchCount", {
                 headers: {
                     'Authorization': `Bearer ${localStorage.getItem("token")}`
                   }
@@ -32,12 +32,6 @@ const Upload = () => {
                 }, 2000);
                 return;
             }
-            // if (res.status == 401){
-            //     toast.error("please login first");
-            //     setTimeout(() => {
-            //         navigate('/');
-            //     },2000);
-            // }
             if (data.success){
                 setCounter(data.count);
                 return;
@@ -64,20 +58,13 @@ const Upload = () => {
 
 
         try {
-            const res = await fetch("http://localhost:8000/api/file/upload", {
+            const res = await fetch("https://picstack-1wix.onrender.com/api/file/upload", {
                 method: 'POST',
                 headers: {
                     'Authorization': `Bearer ${localStorage.getItem("token")}`
                 },
                 body: formData
             });
-            // if (res.status===404){
-            //     toast.error("Please activate subscription first");
-            //     setTimeout(() => {
-            //         navigate('/');
-            //     }, 2000);
-            //     return;
-            // }
             if (res.status === 401) {
                 toast.error("Unauthorized. Please login first.");
                 setTimeout(() => {
@@ -121,7 +108,7 @@ const Upload = () => {
                             onChange={handleFileChange}
                             className="hidden"
                             multiple
-                            accept="image/*,application/pdf" // optional: filter allowed files
+                            accept="image/*,application/pdf" 
                         />
                     </label>
 

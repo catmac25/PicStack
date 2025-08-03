@@ -27,7 +27,7 @@ const Feedback = () => {
             return;
         }
         try{
-            const result = await fetch("http://localhost:8000/api/feedback/insert",  {
+            const result = await fetch("https://picstack-1wix.onrender.com//api/feedback/insert",  {
                 method: "POST", 
                 body: JSON.stringify(form),
                 headers: {

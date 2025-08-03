@@ -44,7 +44,7 @@ const Profile = () => {
   }
   const getUserData = async () => {
     try {
-      const res = await fetch("http://localhost:8000/api/file/fetchCount", {
+      const res = await fetch("https://picstack-1wix.onrender.com/api/file/fetchCount", {
         headers: {
           'Authorization': `Bearer ${localStorage.getItem("token")}`
         }
@@ -71,7 +71,7 @@ const Profile = () => {
         if (!token) {
           toast.error("Please login first");
         }
-        const res = await fetch("http://localhost:8000/api/payment/mysubscription", {
+        const res = await fetch("https://picstack-1wix.onrender.com/api/payment/mysubscription", {
           headers: {
             Authorization: `Bearer ${token}`,
           }
@@ -134,23 +134,6 @@ const Profile = () => {
                   {counter === 0 ? (
                     <p className='text-xl font-extralight text-slate-600 mt-4'>No files uploaded</p>
                   ) : (<div className='mt-5 flex flex-col items-center'>
-                    {/* <ul className="space-y-2 mx-3 w-120">
-                      {images.map((link, index) => {
-                        const decodedName = decodeURIComponent(link.split('/').pop()); // decode %20 to space
-                        return (
-                          <li key={index} className="text-sm text-gray-700 border rounded p-2 bg-gray-100">
-                            <a
-                              href={link}
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              className="block w-full"
-                            >
-                              📁 {decodedName}
-                            </a>
-                          </li>
-                        );
-                      })}
-                    </ul> */}
                     <ul className="space-y-2 mx-3 w-120">
                       {images.map((link, index) => {
                         const decodedName = decodeURIComponent(link.split('/').pop());

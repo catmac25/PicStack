@@ -26,7 +26,7 @@ const Login = () => {
   const handleLoginSubmit = async(e) => {
     e.preventDefault();
     try{
-      const res = await fetch (`http://localhost:8000/api/user/login`, {
+      const res = await fetch (`https://picstack-1wix.onrender.com/api/user/login`, {
         method: 'POST',
         headers: {'Content-Type': 'application/json'},
         body: JSON.stringify(loginForm)
@@ -35,7 +35,7 @@ const Login = () => {
       const data = await res.json();
       if (res.ok){
         localStorage.setItem("token", data.token);
-        const userRes = await fetch("http://localhost:8000/api/user/myprofile", {
+        const userRes = await fetch("https://picstack-1wix.onrender.com/api/user/myprofile", {
           headers: { authorization: `Bearer ${data.token}` },
         });
         const userData = await userRes.json();
@@ -60,7 +60,7 @@ const Login = () => {
     e.preventDefault();
 
     try{
-      const res = await fetch("http://localhost:8000/api/user/signup", {
+      const res = await fetch("https://picstack-1wix.onrender.com/api/user/signup", {
         method: "POST", 
         headers: {'Content-Type': 'application/json'},
         body: JSON.stringify(registerForm)
@@ -69,7 +69,7 @@ const Login = () => {
       const data = await res.json();
       if (res.ok){
         localStorage.setItem("token", data.token);
-        const userRes = await fetch("http://localhost:8000/api/user/myprofile", {
+        const userRes = await fetch("https://picstack-1wix.onrender.com/api/user/myprofile", {
           headers: { authorization: `Bearer ${data.token}` },
         });
         const userData = await userRes.json();
