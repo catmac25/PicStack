@@ -9,7 +9,7 @@ export const UserProvider = ({ children }) => {
     if (!token) return;
 
     try {
-      const res = await fetch("http://localhost:8000/api/user/myprofile", {
+      const res = await fetch("https://picstack-1wix.onrender.com/api/user/myprofile", {
         headers: {
           Authorization: `Bearer ${token}`,
         },
