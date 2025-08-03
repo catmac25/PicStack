@@ -1,8 +1,8 @@
 import React from 'react'
 import Card from "./ExampleHead"
-import image1 from "/Users/arpitaarora/Documents/docStation/frontend/src/assets/image1.svg"
-import image2 from "/Users/arpitaarora/Documents/docStation/frontend/src/assets/image2.svg"
-import image3 from "/Users/arpitaarora/Documents/docStation/frontend/src/assets/image3.svg"
+import image1 from "./image1.svg"
+import image2 from "./image2.svg"
+import image3 from "./image3.svg"
 function Examples() {
   
   return (
